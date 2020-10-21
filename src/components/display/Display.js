@@ -1,10 +1,10 @@
 import React, { useState, useRef } from "react";
 
-// import "./Display.css";
-import { Container } from "./Container";
-import Button from "./Button";
-import Tooltip from "./Tooltip";
-import { generatePassword, copyToClipBoard } from "./Helper";
+import "./Display.css";
+import { Container } from "../container/Container";
+import { Button } from "reactstrap";
+import Tooltip from "../container/tooltip/Tooltip";
+import { generatePassword, copyToClipBoard } from "../../utils/Helper";
 
 const Display = () => {
   const [password, setPassword] = useState("");
@@ -54,7 +54,7 @@ const Display = () => {
 
   return (
     <>
-      <div>
+      <div className="offset-2">
         <select
           name="type"
           value={type}
@@ -68,7 +68,7 @@ const Display = () => {
       </div>
       <div className="row">
         <div
-          className="col-12 password-display-container"
+          className="col-9 password-display-container"
           style={{ backgroundColor: setBackgroundColor(password) }}
         >
           <div style={{ width: "100%" }}>
@@ -96,16 +96,25 @@ const Display = () => {
           </div>
 
           <div className="password-display-icons">
-            <Button
+            {/* <Button
               className="copy-btn"
               iconClass="far fa-copy"
               handleClick={copyClipBoard}
-            />
-            <Button
+            >
+              Copy
+            </Button> */}
+            {/* <Button
               className="generate-btn"
               iconClass="fas fa-sync-alt"
               handleClick={() => generateNewPassword()}
-            />
+            /> */}
+
+            <Button color="primary" onClick={copyClipBoard}>
+              copy
+            </Button>
+            <Button color="warning" onClick={generateNewPassword}>
+              new
+            </Button>
 
             <Tooltip
               message="Copied"
