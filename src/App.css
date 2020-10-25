@@ -11,6 +11,9 @@ body {
   left: 0;
   z-index: -1;
 }
+.App {
+  cursor: url(./components/cr.png), auto;
+}
 
 .navlinks {
   color: white;

@@ -1,18 +1,26 @@
 import React from "react";
 import { Jumbotron } from "reactstrap";
 import "./Header.css";
-
+import { Blob } from "./Blob";
 const Header = () => {
   return (
-    <Jumbotron fluid>
+    <div className="container bg-transparent" fluid>
       <div className="row">
+        <h1
+          className="glitch  d-none d-lg-block"
+          data-text="Not So Incognito"
+          style={{ marginLeft: "450px", fontSize: "2em " }}
+        >
+          Not So Incognito
+        </h1>
         <div className="col-md-12 header">
           <h1 className="h1">Secure Yourself Now</h1>
           <div className="col-md-12">
-            <h4 style={{ color: "black" }}>
+            <h4 style={{ color: "white" }}>
               Create strong passwords with Password Generator
             </h4>
           </div>
+
           <div style={{ marginTop: "27px" }}>
             <img
               src="https://www.flaticon.com/svg/static/icons/svg/3039/3039418.svg "
@@ -50,9 +58,14 @@ const Header = () => {
               style={{ marginLeft: "7px" }}
             ></img>
           </div>
+          <div className=" d-none d-lg-block" style={{ marginTop: "15px" }}>
+            <Blob />
+          </div>
+
+          <div className="row" style={{ marginTop: "47px" }}></div>
         </div>
       </div>
-    </Jumbotron>
+    </div>
   );
 };
 
