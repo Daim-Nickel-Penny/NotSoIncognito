@@ -3,3 +3,21 @@
 body {
   font-family: "Roboto", sans-serif;
 }
+.particles {
+  position: fixed;
+  right: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.navlinks {
+  color: white;
+}
+.navb {
+  background-color: #050117 !important;
+}
+.navbar-toggler-icon {
+  color: white;
+}

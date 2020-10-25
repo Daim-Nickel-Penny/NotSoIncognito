@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Table } from "reactstrap";
 class Och extends Component {
   constructor(props) {
     super(props);
@@ -114,18 +114,53 @@ class Och extends Component {
   render() {
     return (
       <>
-        <h1>
-          OS version
-          <p>
-            {
-              (this.state.brName,
-              this.state.fullVer,
-              this.state.majorVer,
-              this.state.navApp,
-              this.state.navUser)
-            }
-          </p>
-        </h1>
+        <div>
+          <Table responsive>
+            <thead>
+              <th style={{ backgroundColor: "#FFC107", color: "#FFFFFF" }}>
+                #
+              </th>
+              <th style={{ backgroundColor: "#757575", color: "#FFFFFF" }}>
+                Your Browser Name
+              </th>
+              <th style={{ backgroundColor: "#FFC107", color: "#FFFFFF" }}>
+                Full Browser Version
+              </th>
+              <th style={{ backgroundColor: "#757575", color: "#FFFFFF" }}>
+                Major Version
+              </th>
+              <th style={{ backgroundColor: "#FFC107", color: "#FFFFFF" }}>
+                Navigator App
+              </th>
+              <th style={{ backgroundColor: "#757575", color: "#FFFFFF" }}>
+                Navigator User
+              </th>
+            </thead>{" "}
+            <tbody>
+              <th
+                style={{ backgroundColor: "#FFECB3", color: "#FF5722" }}
+                scope="row"
+              >
+                1
+              </th>
+              <td style={{ backgroundColor: "#CFD8DC", color: "#FF5722" }}>
+                {this.state.brName}
+              </td>
+              <td style={{ backgroundColor: "#FFECB3", color: "#FF5722" }}>
+                {this.state.fullVer}
+              </td>
+              <td style={{ backgroundColor: "#CFD8DC", color: "#FF5722" }}>
+                {this.state.majorVer}
+              </td>
+              <td style={{ backgroundColor: "#FFECB3", color: "#FF5722" }}>
+                {this.state.navApp}
+              </td>
+              <td style={{ backgroundColor: "#CFD8DC", color: "#FF5722" }}>
+                {this.state.navUser}
+              </td>
+            </tbody>
+          </Table>
+        </div>
       </>
     );
   }

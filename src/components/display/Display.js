@@ -5,7 +5,7 @@ import { Container } from "../container/Container";
 import { Button } from "reactstrap";
 import Tooltip from "../container/tooltip/Tooltip";
 import { generatePassword, copyToClipBoard } from "../../utils/Helper";
-
+import { BrowserRouter, Route, Link } from "react-router-dom";
 const Display = () => {
   const [password, setPassword] = useState("");
   const [rangeValue, setRange] = useState();
@@ -55,6 +55,7 @@ const Display = () => {
   return (
     <>
       <div className="offset-2">
+        <a href="/generate" name="generate"></a>
         <select
           name="type"
           value={type}
@@ -137,11 +138,12 @@ const Display = () => {
 };
 
 const selectTagStyle = {
-  backgroundColor: "inherit",
+  backgroundColor: "white",
   color: "#506175",
   width: "20%",
   height: "auto",
   marginLeft: "-4px",
+  marginBottom: "3px",
 };
 
 export default Display;

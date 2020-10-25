@@ -21,7 +21,7 @@ export default class Tmz extends Component {
   render() {
     return (
       <>
-        <h1>TimeZone is {this.state.zone}</h1>
+        <h6> {this.state.zone}</h6>
       </>
     );
   }

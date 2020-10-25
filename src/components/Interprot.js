@@ -15,7 +15,7 @@ const Interprot = () => {
     <>
       <div className="row">
         <div className="col text-center">
-          <h2>Find my IP and Location</h2>
+          <h2 style={{ backgroundColor: "white" }}>Find my IP and Location</h2>
           <p className="mt-3">
             <button
               className="btn btn-primary"
